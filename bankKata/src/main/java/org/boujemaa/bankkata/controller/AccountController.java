@@ -14,7 +14,7 @@ import java.util.List;
 public class AccountController {
 
     @Autowired
-    private AccountServiceImpl accountService;  // Utilisation de l'implémentation directement
+    private AccountServiceImpl accountService;
 
     @PostMapping("/deposit")
     public ResponseEntity<String> deposit(@RequestParam int amount) {
@@ -38,6 +38,6 @@ public class AccountController {
 
     @GetMapping("/statement")
     public List<Transaction> getStatement() {
-        return accountService.getStatement();  // Utilisation de la méthode supplémentaire
+        return accountService.getStatement();
     }
 }
